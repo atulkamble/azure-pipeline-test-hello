@@ -1,17 +1,11 @@
 # Basic pipeline example
 trigger:
 - main
-- dev
 
 pool:
   vmImage: 'ubuntu-24.04'
 
 steps:
-- script: echo Hello, Azure Pipelines!
-  displayName: 'Running First Script'
+- script: python --version
+  displayName: 'Checking Python Version'
 
-
-- script: |
-    echo Running a multi-line script
-    echo This is the second line
-  displayName: 'Run a multi-line script'
